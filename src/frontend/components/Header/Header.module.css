@@ -1,0 +1,27 @@
+.container .ventelibreLogo {
+    width: 100px;
+    height: 100%;
+}
+
+.container nav {
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: space-between;
+    background-color: rgb(135, 217, 250);
+}
+
+.divofnav {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+}
+
+.divofnavElement {
+    margin-right: 30px;
+}
+
+.divofnav input {
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+}

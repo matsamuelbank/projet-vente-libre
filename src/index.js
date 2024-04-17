@@ -1,17 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Signup from './frontend/components/Signup/Signup';
+import Login from './frontend/components/Login/Login';
+import Buyer from './frontend/components/Buyer/Buyer';
+import Seller from './frontend/components/Seller/Seller';
+import About from './frontend/components/About/About';
+import Contact from  './frontend/components/Contact/Contact';
+import Addproduct from './frontend/components/Addproduct/Addproduct';
+import Myaccount from './frontend/components/Myaccount/Myaccount';
+import Header from './frontend/components/Header/Header';
+import LearnMore from './frontend/components/LearnMore/LearnMore';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+
+function Main() {
+    const location = useLocation();
+    const path = location.pathname;
+
+    return (
+        <React.StrictMode>
+            {
+                path !== '/' && path !== '/signup' ? <Header /> : null 
+            }
+            <Routes>
+                <Route path='/' element={<Login/>}/>
+                <Route path='/signup' element={<Signup/>}/>
+                <Route path='/buyer'  element={<Buyer/>}/>
+                <Route path='/seller' element={<Seller/>}  />
+                <Route path='/about'  element={<About/>}/>
+                <Route path='contact' element={<Contact/>}/>
+                <Route path='addproduct' element= {<Addproduct/>}/>
+                <Route path='myaccount' element={<Myaccount/>}/>
+                <Route path='/learnmore/:id' element={<LearnMore/>}/>
+            </Routes>
+        </React.StrictMode>
+    );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Router>
+        <Main />
+    </Router>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

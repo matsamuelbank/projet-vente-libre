@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    /* margin-left: 20px; */
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.2);;
+}
+
+.container .card{
+    display: flex;
+}
+
+.container .card img{
+    width: 600px;
+    height: 300px;
+}
+
+.container .theproductInfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.card {
+    max-width: 300px;
+    font-family: arial;
+    /* margin-top: 20px; */
+    width: 100%;
+
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}

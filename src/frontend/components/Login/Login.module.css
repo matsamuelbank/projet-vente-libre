@@ -1,0 +1,31 @@
+/* LoginStyles.css */
+.container {
+    margin-top: 100px;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+}
+
+.formconexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formconexion input, .formconexion
+select {
+    width: 250px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.btnSubmit {
+    width: 250px;
+    text-align: center;
+    background-color: rgb(0, 128, 109);
+    color: white;
+}

@@ -1,0 +1,23 @@
+.container {}
+
+.formproduct {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px auto;
+}
+
+.formproduct input, .formproduct select {
+    padding: 10px;
+}
+
+.formproduct textarea {
+    height: 200px;
+    resize: none;
+}
+
+.formproduct button {
+    width: 100px;
+}
